@@ -31,9 +31,9 @@ for i in range(0,queries):
         complete_para.append(para)
         final_para=" ".join(complete_para)
 
-final_para=final_para.replace('Editions: En/football/real-madrid','')
+final_para=re.sub('^Editions: En/football/real-madrid','',final_para)
 final_para=final_para.replace('Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados. Follow us Editions: En/football/real-madrid','')
-final_para=final_para.replace(' Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados. Follow us ','')
+final_para=final_para.replace(' Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados. Follow us','')
 final_para=final_para.replace("""© Mayo
 2020"""," ")
 print(final_para)
