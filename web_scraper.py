@@ -4,11 +4,12 @@ import re
 url='https://www.marca.com/en/football/real-madrid.html'
 r=requests.get(url)
 main_page_news=r.content
+
 soup=BeautifulSoup(main_page_news,'html.parser')
 main_page_headlines=soup.find_all('h3', 'mod-title')
-len(main_page_headlines)
+#len(main_page_headlines)
 
-#Link of the articles
+#Getting the link to the articles
 queries=4
 list_of_links=[]
 list_of_titles=[]
@@ -21,6 +22,7 @@ for i in range(0,queries):
 #Getting the title of the articles
     title=main_page_headlines[i].find('a')['title']
     list_of_titles.append(title)
+    
 #Getting the content of the headlines
     real_story=requests.get(link_url)
     story=real_story.content
