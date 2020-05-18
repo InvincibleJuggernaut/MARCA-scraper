@@ -13,6 +13,7 @@ queries=4
 list_of_links=[]
 list_of_titles=[]
 complete_para=[]
+complete_para_final_list=[]
 for i in range(0,queries):
     link_url=main_page_headlines[i].find('a')['href']
     list_of_links.append(link_url)
