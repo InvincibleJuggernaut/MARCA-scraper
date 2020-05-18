@@ -7,7 +7,6 @@ main_page_news=r.content
 
 soup=BeautifulSoup(main_page_news,'html.parser')
 main_page_headlines=soup.find_all('h3', 'mod-title')
-#len(main_page_headlines)
 
 #Getting the link to the articles
 queries=4
