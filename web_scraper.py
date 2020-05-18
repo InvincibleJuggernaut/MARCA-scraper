@@ -18,11 +18,10 @@ for i in range(0,queries):
     link_url=main_page_headlines[i].find('a')['href']
     list_of_links.append(link_url)
     
-#Title of the articles
+#Getting the title of the articles
     title=main_page_headlines[i].find('a')['title']
     list_of_titles.append(title)
-    
-#Content of the headlines
+#Getting the content of the headlines
     real_story=requests.get(link_url)
     story=real_story.content
     soup_content=BeautifulSoup(story,'html.parser')
@@ -38,8 +37,6 @@ final_para=final_para.replace(' Unidad Editorial Información Deportiva, S.L.U. 
 final_para=final_para.replace("""© Mayo
 2020"""," ")
 print(final_para)
-
-
 
 
 
