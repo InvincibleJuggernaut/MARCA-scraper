@@ -32,13 +32,19 @@ for i in range(0,queries):
         para=main_story[j].get_text()
         complete_para.append(para)
     complete_para_final=" ".join(complete_para)
-
-final_para=re.sub('^Editions: En/football/real-madrid','',final_para)
-final_para=final_para.replace('Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados. Follow us Editions: En/football/real-madrid','')
-final_para=final_para.replace(' Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados. Follow us','')
-final_para=final_para.replace("""© Mayo
+    complete_para.clear()
+    complete_para_final=re.sub('^Editions: En/football/real-madrid','',complete_para_final)
+    complete_para_final=complete_para_final.replace('Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados. Follow us Editions: En/football/real-madrid','')
+    complete_para_final=complete_para_final.replace(' Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados. Follow us','')
+    complete_para_final=complete_para_final.replace("""© Mayo
 2020"""," ")
-print(final_para)
+    complete_para_final_list.append(complete_para_final)
+    
+    print(list_of_titles[i])
+    print(complete_para_final_list[i])
+    print('\n')
+
+
 
 
 
