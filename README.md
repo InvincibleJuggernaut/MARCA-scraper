@@ -1,5 +1,8 @@
 # MARCA-scraper
 
+[![](https://img.shields.io/badge/MADE%20WITH%20-Python-blueviolet)](https://www.python.org)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-brightgreen.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 <h2>Introduction</h2>
 MARCA is a Spanish daily sports newspaper whose primary focus is on the Madrid clubs, although it covers important news from other football teams as well. 
 Majority of the content on their main website falls into the following categories :
