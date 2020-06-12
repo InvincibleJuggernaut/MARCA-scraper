@@ -37,6 +37,8 @@ for i in range(0,queries):
     complete_para_final=complete_para_final.replace(' Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados. Follow us','')
     complete_para_final=complete_para_final.replace("""© Mayo
 2020"""," ")
+    complete_para_final=complete_para_final.replace("""© Junio
+2020""","")
     complete_para_final_list.append(complete_para_final)
     
     print(list_of_titles[i])
