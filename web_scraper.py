@@ -43,6 +43,14 @@ for i in range(0,queries):
 2020""","")
     complete_para_final=complete_para_final.replace("""© Agosto
 2020""","")
+    complete_para_final=complete_para_final.replace("""© Septiembre
+2020""","")
+    complete_para_final=complete_para_final.replace("""© Octubre
+2020""","")
+    complete_para_final=complete_para_final.replace("""© Noviembre
+2020""","")
+    complete_para_final=complete_para_final.replace("""© Diciembre
+2020""","")
     complete_para_final_list.append(complete_para_final)
     
     print(list_of_titles[i])
