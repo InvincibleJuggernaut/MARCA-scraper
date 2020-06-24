@@ -26,4 +26,6 @@ This project scrapes their site dedicated to Real Madrid news and fetches as man
 
 <br>
 <br>
-<b>----------------------------------------------This project is still under development----------------------------------------------</b>
+<hr>
+<h5 align=center>This project is under development</h5>
+<hr>
