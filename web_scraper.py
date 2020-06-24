@@ -62,10 +62,4 @@ for i in range(0,queries):
     print(list_of_titles[i])
     print(complete_para_final_list[i].strip())
     print('\n')
-
-
-
-
-
-
-
+   
