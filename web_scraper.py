@@ -14,6 +14,7 @@ list_of_links=[]
 list_of_titles=[]
 complete_para=[]
 complete_para_final_list=[]
+
 for i in range(0,queries):
     link_url=main_page_headlines[i].find('a')['href']
     list_of_links.append(link_url)
@@ -26,10 +27,15 @@ for i in range(0,queries):
     real_story=requests.get(link_url)
     story=real_story.content
     soup_content=BeautifulSoup(story,'html.parser')
+    
+    for x in soup_content.find_all('p','summary-lead second izquierda'):
+        x.extract()
+        
     main_story=soup_content.find_all('p')
     for j in range(0,len(main_story)):
         para=main_story[j].get_text()
         complete_para.append(para)
+        
     complete_para_final=" ".join(complete_para)
     complete_para.clear()
     complete_para_final=re.sub('^Editions: En/football/real-madrid','',complete_para_final)
@@ -54,7 +60,7 @@ for i in range(0,queries):
     complete_para_final_list.append(complete_para_final)
     
     print(list_of_titles[i])
-    print(complete_para_final_list[i])
+    print(complete_para_final_list[i].strip())
     print('\n')
 
 
