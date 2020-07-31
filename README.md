@@ -32,7 +32,7 @@ This project scrapes their site dedicated to Real Madrid news and fetches as man
 <p>Clone or download the repository in your preffered directory using:</p>
   
 ```
-  git clone https://github.com/InvincibleJuggernaut/MARCA-scraper.git
+git clone https://github.com/InvincibleJuggernaut/MARCA-scraper.git
 ```
 <h2>Dependencies</h2>
 
