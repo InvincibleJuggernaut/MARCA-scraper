@@ -24,8 +24,13 @@ This project scrapes their site dedicated to Real Madrid news and fetches as man
   <li>Python</li>
 </ul>
 
+<h2>Installation</h2>
+<p>Clone or download the repository in your preffered directory using:</p>
+  
+```
+  git clone https://github.com/InvincibleJuggernaut/MARCA-scraper.git
+```
+
 <br>
 <br>
-<hr>
-<h5 align=center>This project is under development</h5>
-<hr>
+
