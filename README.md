@@ -51,3 +51,5 @@ python3 web_scraper.py
 <br>
 <br>
 
+<h2>License</h2>
+<p><a href="LICENSE">GPLv3</a></p>
