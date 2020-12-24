@@ -3,8 +3,7 @@ from bs4 import BeautifulSoup
 import re
 from datetime import date, timedelta
 
-today=(date.today()).strftime("%Y-%m-%d")[0:4]
-print(today)
+current_year=(date.today()).strftime("%Y-%m-%d")[0:4]
 months=['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
 
 url='https://www.marca.com/en/football/real-madrid.html'
@@ -47,22 +46,12 @@ for i in range(0,queries):
     complete_para_final=re.sub('^Editions: En/football/real-madrid','',complete_para_final)
     complete_para_final=complete_para_final.replace('Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados. Follow us Editions: En/football/real-madrid','')
     complete_para_final=complete_para_final.replace(' Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados. Follow us','')
-    complete_para_final=complete_para_final.replace("""© Mayo
-2020"""," ")
-    complete_para_final=complete_para_final.replace("""© Junio
-2020""","")
-    complete_para_final=complete_para_final.replace("""© Julio
-2020""","")
-    complete_para_final=complete_para_final.replace("""© Agosto
-2020""","")
-    complete_para_final=complete_para_final.replace("""© Septiembre
-2020""","")
-    complete_para_final=complete_para_final.replace("""© Octubre
-2020""","")
-    complete_para_final=complete_para_final.replace("""© Noviembre
-2020""","")
-    complete_para_final=complete_para_final.replace("""© Diciembre
-2020""","")
+
+    for x in months:
+        omission = """ © {x}
+{current_year}""".format(x=x, current_year=current_year)
+        complete_para_final=complete_para_final.replace(omission," ")
+
     complete_para_final_list.append(complete_para_final)
     
     print(list_of_titles[i])
