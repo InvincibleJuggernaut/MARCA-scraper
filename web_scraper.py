@@ -1,6 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+from datetime import date, timedelta
+
+today=(date.today()).strftime("%Y-%m-%d")[0:4]
+print(today)
+months=['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+
 url='https://www.marca.com/en/football/real-madrid.html'
 r=requests.get(url)
 main_page_news=r.content
@@ -63,3 +69,4 @@ for i in range(0,queries):
     print(complete_para_final_list[i].strip())
     print('\n')
    
+
