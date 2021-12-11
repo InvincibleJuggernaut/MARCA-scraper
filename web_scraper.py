@@ -14,7 +14,7 @@ soup=BeautifulSoup(main_page_news,'html.parser')
 main_page_headlines=soup.find_all('h3', 'mod-title')
 
 #Getting the link to the articles
-queries=4
+queries=10
 list_of_links=[]
 list_of_titles=[]
 complete_para=[]
